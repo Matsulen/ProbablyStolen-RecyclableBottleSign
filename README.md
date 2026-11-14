@@ -10,7 +10,7 @@
 
 - **[下载最新版 RecyclableSign.zip](https://github.com/Matsulen/ProbablyStolen-RecyclableBottleSign/releases/latest/download/RecyclableSign.zip)**
 - [全部版本](https://github.com/Matsulen/ProbablyStolen-RecyclableBottleSign/releases)
-- Steam 创意工坊：尚未上架，上架后在这里补链接。
+- Steam (https://steamcommunity.com/sharedfiles/filedetails/?id=3838867680)
 
 ## 安装
 
