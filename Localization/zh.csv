@@ -1,0 +1,11 @@
+sign_recyclable_name,可回收品霓虹灯牌
+sign_recyclable_desc,放进展示柜，可以吸引带着空酒瓶和空水瓶的拾荒者：有的卖钱，有的只换食物。
+type_recyclable,可回收品
+seller_offer_1,看到你挂的牌子了。我攒了些空瓶子，都还能用，你收不收？
+seller_offer_2,听说你这儿收瓶子？酒瓶、水瓶我都有，洗过了。
+seller_offer_3,这些瓶子是我从下层一个个捡回来的。给个价吧。
+barter_intro_1,看到你挂的牌子了。我这儿有些空瓶子，不过我不要钱。
+barter_intro_2,给我点吃的就行。瓶子你自己挑一份。
+barter_repeat,有吃的吗？有的话瓶子就归你。
+barter_accept,成交。总算能吃上一口了。
+barter_done,谢了。下回攒够瓶子我再来。

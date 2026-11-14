@@ -1,0 +1,45 @@
+[Title]
+Recyclable Bottle Neon Sign
+
+[Description]
+[h1]Recyclable Bottle Neon Sign[/h1]
+Adds a green 2x2 neon sign. Put it in your display case and scavengers start turning up with empty wine bottles and empty water bottles, so winemaking and water selling no longer stall for lack of containers.
+
+[h2]How to get it[/h2]
+[list]
+[*][b]Dr. Jackson[/b] sells it for 100 whenever you do not own one.
+[*]It fits in the file box, like the vanilla signs.
+[/list]
+
+[h2]What it does[/h2]
+While the sign sits in the display case, there is a [b]75%[/b] chance each day that it attracts one scavenger. The visitor shows up in the clientele panel and is one of the two below, half the time each:
+
+[h3]Seller[/h3]
+[list]
+[*]Sells wholesale at 15% to 25% off.
+[*]Always brings 2 empty wine bottles and 2 water bottles, plus a few random extras: usually 5 to 8 items.
+[*]Higher Lower Level reputation means more large bottles, extra wine bottles and the occasional jug.
+[/list]
+
+[h3]Barterer[/h3]
+[list]
+[*]Wants food, not credits: any [b]1 food item[/b] buys a whole page of bottles.
+[*]Flip through the pages as with vanilla barter. The visitor leaves after one trade.
+[*]Page 1: 3 empty wine bottles
+[*]Page 2: 2 small bottles + 2 standard bottles
+[*]Page 3: 2 large bottles
+[*]Page 4: 1 water jug (not always there, more common at higher reputation)
+[/list]
+
+Every container comes empty.
+
+[h2]Compatibility[/h2]
+[list]
+[*]Built on the game's native mod API. No prerequisites.
+[*]Declares no capabilities: no network access, no file access.
+[*]Safe to add to an existing save. If you remove the mod, signs already in the save turn into an "unknown item" and come back when you enable it again.
+[*]Simplified Chinese and English. Other languages fall back to English.
+[/list]
+
+[h2]Feedback[/h2]
+Found a bug or have a balance suggestion? Leave a comment.

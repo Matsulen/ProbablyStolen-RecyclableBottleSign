@@ -1,0 +1,11 @@
+# build output
+bin/
+obj/
+dist/
+*.zip
+
+# promo working files: videos (some carry the game's soundtrack), raw screenshots, old covers
+workshop/video/
+workshop/video_storyboard.md
+workshop/cover_v1.png
+workshop/cover_old_name.png

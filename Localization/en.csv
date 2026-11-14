@@ -1,0 +1,11 @@
+sign_recyclable_name,Recyclables Neon Sign
+sign_recyclable_desc,"Put it in the display case to attract scavengers carrying empty wine bottles and water bottles. Some sell them, some only trade them for food."
+type_recyclable,Recyclables
+seller_offer_1,"Saw your sign. I've been saving up empties, all still good. You buying?"
+seller_offer_2,"Heard you take bottles here? Wine bottles, water bottles, I've got both. Rinsed them too."
+seller_offer_3,Picked every one of these up down in the lower levels. Name a price.
+barter_intro_1,"Saw your sign. I've got empties, but I'm not after credits."
+barter_intro_2,Something to eat will do. Pick whichever lot of bottles you like.
+barter_repeat,Got any food? The bottles are yours if you do.
+barter_accept,Deal. About time I got a bite.
+barter_done,Thanks. I'll be back when I've collected more.
