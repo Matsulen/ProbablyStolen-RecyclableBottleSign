@@ -10,7 +10,7 @@
 
 - **[下载最新版 RecyclableSign.zip](https://github.com/Matsulen/ProbablyStolen-RecyclableBottleSign/releases/latest/download/RecyclableSign.zip)**
 - [全部版本](https://github.com/Matsulen/ProbablyStolen-RecyclableBottleSign/releases)
-- Steam (https://steamcommunity.com/sharedfiles/filedetails/?id=3838867680)
+- [Steam创意工坊](https://steamcommunity.com/sharedfiles/filedetails/?id=3838867680)
 
 ## 安装
 
@@ -108,7 +108,7 @@ Adds a green 2x2 neon sign. Put it in your display case and scavengers start tur
 
 - **[Download the latest RecyclableSign.zip](https://github.com/Matsulen/ProbablyStolen-RecyclableBottleSign/releases/latest/download/RecyclableSign.zip)**
 - [All releases](https://github.com/Matsulen/ProbablyStolen-RecyclableBottleSign/releases)
-- Steam Workshop: not published yet.
+- [Steam WorkShop](https://steamcommunity.com/sharedfiles/filedetails/?id=3838867680)
 
 ### Install
 
