@@ -2,7 +2,7 @@
 
 《深空当铺：可能是偷的》(Probably Stolen) 的模组。[English below](#english)
 
-![封面](workshop/cover.png)
+![封面](workshop/cover_anim_16x9.gif)
 
 新增一块绿色的 2×2 广告灯牌。把它放进展示柜，拾荒者就会带着空酒瓶和空水瓶上门，酿酒和卖水不用再到处凑瓶子。
 
