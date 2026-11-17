@@ -57,14 +57,14 @@ namespace RecyclableSign
         public void OnEnable()
         {
             ModHook.OnModItemDirectoryInit += RegisterItems;
-            ModHook.OnPlaceInventorInventoryItemLate += OfferSignAtInventor;
+            ModHook.OnPlaceInventorInventoryItemEarly += OfferSignAtInventor;
             StoreClientListDict.storeClientDict[ClientId] = SellerFactory;
         }
 
         public void OnDisable()
         {
             ModHook.OnModItemDirectoryInit -= RegisterItems;
-            ModHook.OnPlaceInventorInventoryItemLate -= OfferSignAtInventor;
+            ModHook.OnPlaceInventorInventoryItemEarly -= OfferSignAtInventor;
             if (StoreClientListDict.storeClientDict.TryGetValue(ClientId, out Func<StoreClient> current) && current == SellerFactory)
             {
                 StoreClientListDict.storeClientDict.Remove(ClientId);
@@ -92,6 +92,11 @@ namespace RecyclableSign
         }
 
         /// <summary>Dr. Jackson stocks the sign whenever the player does not own one, like the vanilla signs.</summary>
+        /// <remarks>
+        /// Runs on the Early hook, before the rest of his stock. When he visits the shop his goods go on the
+        /// 18x4 front counter, and anything that no longer fits is destroyed without notice. Added last, the
+        /// 2x2 sign was the first thing to be dropped once his stock grew, so it never appeared there.
+        /// </remarks>
         private static void OfferSignAtInventor(List<GameItem> ownedItems)
         {
             // The hook also fires for Dr. Jackson's "special stock" event, a fixed list that carries

@@ -38,8 +38,8 @@
 
 - 按批发价打 15%～25% 的折扣出售。
 - 保底 2 个空酒瓶和 2 个水瓶，另有若干件随机追加，通常 5～8 件。
-- 下层声望越高，越容易带来大瓶、额外的酒瓶和水罐。
-- 货物按酒瓶、小瓶、标准瓶、大瓶、水罐的顺序摆上柜台。
+- 下层声望越高，越容易带来大瓶和额外的酒瓶；声望超过 50 时必定带一个水罐。
+- 货物按酒瓶、水罐、大瓶、标准瓶、小瓶的顺序摆上柜台。
 
 ![卖家](workshop/gifs/3_seller.gif)
 
@@ -50,7 +50,7 @@
 - 第 1 页：空酒瓶 ×3
 - 第 2 页：小瓶 ×2 和标准瓶 ×2
 - 第 3 页：大瓶 ×2
-- 第 4 页：水罐 ×1（不一定有，声望越高越常见）
+- 第 4 页：水罐 ×1（声望越高越常见，超过 50 时必定有）
 
 ![以物易物](workshop/gifs/4_barter.gif)
 
@@ -122,8 +122,8 @@ Game version: 0.46. Safe to add to an existing save.
 
 - **Getting it:** Dr. Jackson sells the sign for 100 whenever you do not own one. It fits in the file box, like the vanilla signs.
 - **Effect:** while the sign sits in the display case, there is a 75% chance each day that it attracts one scavenger, who queues ahead of the other display-case customers. The visitor is one of the two below, half the time each.
-- **Seller:** sells wholesale at 15% to 25% off. Always brings 2 empty wine bottles and 2 water bottles plus a few random extras, usually 5 to 8 items. Higher Lower Level reputation means more large bottles, extra wine bottles and the occasional jug.
-- **Barterer:** wants food, not credits. Any 1 food item buys a whole page of bottles: 3 wine bottles, or 2 small and 2 standard bottles, or 2 large bottles, and sometimes a page with 1 water jug. Flip through the pages as with vanilla barter. The visitor leaves after one trade.
+- **Seller:** sells wholesale at 15% to 25% off. Always brings 2 empty wine bottles and 2 water bottles plus a few random extras, usually 5 to 8 items. Higher Lower Level reputation means more large bottles and extra wine bottles; above 50 they always bring a water jug.
+- **Barterer:** wants food, not credits. Any 1 food item buys a whole page of bottles: 3 wine bottles, or 2 small and 2 standard bottles, or 2 large bottles, plus a page with 1 water jug that is sometimes there, and always there once reputation is above 50. Flip through the pages as with vanilla barter. The visitor leaves after one trade.
 
 Every container comes empty.
 

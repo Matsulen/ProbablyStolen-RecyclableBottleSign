@@ -70,7 +70,7 @@ namespace RecyclableSign
             });
             offer.AddOfferSet(() => OfferMany(LargeBottle, 2));
             int jugPageChance = Clamp(20 + StoreReputation.GetLLReputation() / 3, 10, 40);
-            if (RNG.Roll(jugPageChance))
+            if (IsJugGuaranteed() || RNG.Roll(jugPageChance))
             {
                 offer.AddOfferSet(() => OfferMany(WaterJug, 1));
             }
@@ -150,7 +150,7 @@ namespace RecyclableSign
                 if (RNG.Roll(largeChance)) stock.Add(LargeBottle);
                 if (RNG.Roll(wineChance)) stock.Add(WineBottle);
             }
-            if (RNG.Roll(jugChance)) stock.Add(WaterJug);
+            if (IsJugGuaranteed() || RNG.Roll(jugChance)) stock.Add(WaterJug);
 
             foreach (string kind in DisplayOrder)
             {
@@ -161,8 +161,23 @@ namespace RecyclableSign
             }
         }
 
-        /// <summary>Counter layout: wine bottles first, then water containers from smallest to largest.</summary>
-        private static readonly string[] DisplayOrder = { WineBottle, SmallBottle, NormalBottle, LargeBottle, WaterJug };
+        /// <summary>
+        /// Counter layout: wine bottles, then water containers from largest to smallest. Items that do not fit
+        /// on the counter are dropped from the end, so the big jug goes early and only small bottles risk it.
+        /// </summary>
+        private static readonly string[] DisplayOrder = { WineBottle, WaterJug, LargeBottle, NormalBottle, SmallBottle };
+
+        /// <summary>Above this Lower Level reputation the 6000 ml jug is no longer left to chance.</summary>
+        private const int JugGuaranteedAboveRep = 50;
+
+        /// <summary>
+        /// True when Lower Level reputation is above 50: the seller always brings one water jug and the
+        /// barterer always offers the jug page. Below that, both keep their reputation-scaled chance.
+        /// </summary>
+        private static bool IsJugGuaranteed()
+        {
+            return StoreReputation.GetLLReputation() > JugGuaranteedAboveRep;
+        }
 
         /// <summary>A guaranteed water bottle: small or standard, with a reputation-scaled chance of a large one.</summary>
         private static string PickWaterBottle(int largeChance)

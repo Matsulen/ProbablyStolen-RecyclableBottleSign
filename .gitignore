@@ -9,3 +9,6 @@ workshop/video/
 workshop/video_storyboard.md
 workshop/cover_v1.png
 workshop/cover_old_name.png
+
+# Workshop upload script: holds local absolute paths
+workshop/*.vdf

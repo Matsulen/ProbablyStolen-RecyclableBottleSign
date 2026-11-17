@@ -18,7 +18,7 @@ While the sign sits in the display case, there is a [b]75%[/b] chance each day t
 [list]
 [*]Sells wholesale at 15% to 25% off.
 [*]Always brings 2 empty wine bottles and 2 water bottles, plus a few random extras: usually 5 to 8 items.
-[*]Higher Lower Level reputation means more large bottles, extra wine bottles and the occasional jug.
+[*]Higher Lower Level reputation means more large bottles and extra wine bottles; above 50 they always bring a water jug.
 [/list]
 
 [h3]Barterer[/h3]
@@ -28,7 +28,7 @@ While the sign sits in the display case, there is a [b]75%[/b] chance each day t
 [*]Page 1: 3 empty wine bottles
 [*]Page 2: 2 small bottles + 2 standard bottles
 [*]Page 3: 2 large bottles
-[*]Page 4: 1 water jug (not always there, more common at higher reputation)
+[*]Page 4: 1 water jug (more common at higher reputation, always there above 50)
 [/list]
 
 Every container comes empty.
