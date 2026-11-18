@@ -9,3 +9,5 @@ barter_intro_2,给我点吃的就行。瓶子你自己挑一份。
 barter_repeat,有吃的吗？有的话瓶子就归你。
 barter_accept,成交。总算能吃上一口了。
 barter_done,谢了。下回攒够瓶子我再来。
+config_visitor_mode,来访的拾荒者
+config_visitor_mode_tip,"灯牌吸引来的拾荒者是哪一种。两种都有时各占一半。修改后从下一位来访者开始生效，当天已经排队的不受影响。"

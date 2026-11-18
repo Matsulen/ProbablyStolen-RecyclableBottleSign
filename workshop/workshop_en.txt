@@ -12,7 +12,7 @@ Adds a green 2x2 neon sign. Put it in your display case and scavengers start tur
 [/list]
 
 [h2]What it does[/h2]
-While the sign sits in the display case, there is a [b]75%[/b] chance each day that it attracts one scavenger. The visitor shows up in the clientele panel and is one of the two below, half the time each:
+While the sign sits in the display case, there is a [b]75%[/b] chance each day that it attracts one scavenger. The visitor shows up in the clientele panel and is one of the two below, half the time each by default. The mod's settings (gear button in the Mods menu) can limit it to sellers only or barterers only:
 
 [h3]Seller[/h3]
 [list]

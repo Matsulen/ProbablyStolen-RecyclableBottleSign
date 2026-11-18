@@ -93,6 +93,9 @@ namespace RecyclableSign
     {
         private static Sprite cached;
 
+        /// <summary>Set after a failed build so a missing or broken texture is not re-read on every lookup.</summary>
+        private static bool failed;
+
         private static bool Prefix(string atlasPath, string name, ref Sprite __result)
         {
             if (atlasPath != ModEntry.ModId || name != ModEntry.SpriteKey)
@@ -101,11 +104,17 @@ namespace RecyclableSign
             }
             if (cached == null)
             {
+                if (failed)
+                {
+                    return true;
+                }
                 cached = LoadSignSprite();
-            }
-            if (cached == null)
-            {
-                return true;
+                if (cached == null)
+                {
+                    failed = true;
+                    ModEntry.Log?.Warning("Could not build the sign sprite for direct atlas lookups.");
+                    return true;
+                }
             }
             __result = cached;
             return false;
@@ -126,6 +135,7 @@ namespace RecyclableSign
             Texture2D texture = new Texture2D(2, 2, TextureFormat.RGBA32, false);
             if (!texture.LoadImage(png))
             {
+                Object.Destroy(texture);
                 return null;
             }
             texture.filterMode = FilterMode.Point;

@@ -30,7 +30,7 @@
 
 ### 效果
 
-灯牌在展示柜里时，每天有 75% 的概率吸引来一位拾荒者，并显示在客流面板里。他排在所有展示柜顾客的最前面。来的人是下面两种之一，各占一半。
+灯牌在展示柜里时，每天有 75% 的概率吸引来一位拾荒者，并显示在客流面板里。他排在所有展示柜顾客的最前面。来的人是下面两种之一，默认各占一半；也可以在设置里改成只来卖家或只来以物易物的（主菜单“模组”菜单中本模组的齿轮按钮）。
 
 ![展示柜](workshop/gifs/2_display_case.gif)
 
@@ -122,7 +122,7 @@ Game version: 0.46. Safe to add to an existing save.
 ### What it does
 
 - **Getting it:** Dr. Jackson sells the sign for 100 whenever you do not own one. It fits in the file box, like the vanilla signs.
-- **Effect:** while the sign sits in the display case, there is a 75% chance each day that it attracts one scavenger, who queues ahead of the other display-case customers. The visitor is one of the two below, half the time each.
+- **Effect:** while the sign sits in the display case, there is a 75% chance each day that it attracts one scavenger, who queues ahead of the other display-case customers. The visitor is one of the two below, half the time each by default; the mod's settings (gear button in the Mods menu) can limit it to sellers only or barterers only.
 - **Seller:** sells wholesale at 15% to 25% off. Always brings 2 empty wine bottles and 2 water bottles plus a few random extras, usually 5 to 8 items. Higher Lower Level reputation means more large bottles and extra wine bottles; above 50 they always bring a water jug.
 - **Barterer:** wants food, not credits. Any 1 food item buys a whole page of bottles: 3 wine bottles, or 2 small and 2 standard bottles, or 2 large bottles, plus a page with 1 water jug that is sometimes there, and always there once reputation is above 50. Flip through the pages as with vanilla barter. The visitor leaves after one trade.
 

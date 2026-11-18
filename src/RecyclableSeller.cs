@@ -17,12 +17,20 @@ namespace RecyclableSign
         private const string LargeBottle = "large_bottled_water";   // 2000 ml
         private const string WaterJug = "water_jug";                // 6000 ml
 
-        /// <summary>Chance that the visitor wants to barter instead of selling for credits.</summary>
+        /// <summary>Chance that the visitor wants to barter instead of selling, when the player allows both.</summary>
         private const int BarterChance = 50;
 
         public static StoreClient Create()
         {
-            return RNG.Roll(BarterChance) ? CreateBarterer() : CreateSeller();
+            switch (VisitorSettings.Mode)
+            {
+                case VisitorMode.SellerOnly:
+                    return CreateSeller();
+                case VisitorMode.BarterOnly:
+                    return CreateBarterer();
+                default:
+                    return RNG.Roll(BarterChance) ? CreateBarterer() : CreateSeller();
+            }
         }
 
         /// <summary>

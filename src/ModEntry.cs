@@ -48,6 +48,7 @@ namespace RecyclableSign
         public void Init(ModManifest manifest)
         {
             Log = new ModLog(manifest);
+            VisitorSettings.Define(ModHelper.GetConfig(manifest.ID));
             ManifestName = manifest.Name;
             // The Chinese half has no spaces, so the first space is the boundary between the two names.
             int split = string.IsNullOrEmpty(ManifestName) ? -1 : ManifestName.IndexOf(' ');

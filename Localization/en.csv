@@ -9,3 +9,5 @@ barter_intro_2,Something to eat will do. Pick whichever lot of bottles you like.
 barter_repeat,Got any food? The bottles are yours if you do.
 barter_accept,Deal. About time I got a bite.
 barter_done,Thanks. I'll be back when I've collected more.
+config_visitor_mode,Visiting scavenger
+config_visitor_mode_tip,"Which kind of scavenger the sign attracts. With both, each visit is one or the other at even odds. Takes effect from the next visitor; anyone already queued today is unchanged."
