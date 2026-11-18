@@ -36,7 +36,8 @@ Every container comes empty.
 [h2]Compatibility[/h2]
 [list]
 [*]Built on the game's native mod API. No prerequisites.
-[*]Declares no capabilities: no network access, no file access.
+[*]Declares no capabilities: no network access, and it only reads its own mod files.
+[*]Works with Better Cashier: the sign shows its texture in that mod's cashier panel.
 [*]Safe to add to an existing save. If you remove the mod, signs already in the save turn into an "unknown item" and come back when you enable it again.
 [*]Simplified Chinese and English. Other languages fall back to English.
 [/list]

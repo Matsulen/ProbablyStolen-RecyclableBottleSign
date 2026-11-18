@@ -63,7 +63,8 @@
 ## 兼容性
 
 - 使用游戏原生模组接口，不需要任何前置模组。
-- 不申请任何权限：不联网，不读写文件。
+- 不申请任何权限：不联网，只读取本模组自己的文件。
+- 兼容“更好的收银台 Better Cashier”：灯牌在它的收银台界面里正常显示贴图。
 - 中途移除本模组后，存档里的灯牌会变成“未知物品”，重新启用即恢复。
 - 支持简体中文和英文，其他语言显示英文。
 
@@ -130,7 +131,8 @@ Every container comes empty.
 ### Compatibility
 
 - Built on the game's native mod API. No prerequisites.
-- Declares no capabilities: no network access, no file access.
+- Declares no capabilities: no network access, and it only reads its own mod files.
+- Works with Better Cashier: the sign shows its texture in that mod's cashier panel.
 - If you remove the mod, signs already in the save turn into an "unknown item" and come back when you enable it again.
 - Simplified Chinese and English. Other languages fall back to English.
 

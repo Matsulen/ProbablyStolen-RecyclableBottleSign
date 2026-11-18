@@ -3,7 +3,7 @@
   <ID>recyclable_sign</ID>
   <Name>酒瓶水瓶回收灯牌 Recyclable Bottle Neon Sign</Name>
   <Author>WitchRin</Author>
-  <ModVersion>1.0.1</ModVersion>
+  <ModVersion>1.0.2</ModVersion>
   <Description>新增广告灯牌“酒瓶水瓶回收灯牌”。放进展示柜后，会吸引带着空酒瓶和空水瓶的拾荒者，一半来卖钱，一半用瓶子换食物。杰克逊博士处有售。 Adds the Recyclable Bottle Neon Sign. Put it in the display case to attract scavengers with empty wine bottles and water bottles: half sell them, half barter them for food. Sold by Dr. Jackson.</Description>
   <GameVersions>
     <Version>0.46</Version>

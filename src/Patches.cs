@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using HarmonyLib;
+using UnityEngine;
 
 namespace RecyclableSign
 {
@@ -68,6 +69,69 @@ namespace RecyclableSign
             {
                 __result = ModEntry.TwoLineName;
             }
+        }
+    }
+}
+
+namespace RecyclableSign
+{
+    /// <summary>
+    /// Items that use a mod sprite carry the mod id as their "atlas path". The game's own item renderer
+    /// knows that and looks the sprite up in the mod, but code that loads an item icon straight from the
+    /// atlas (RenderHandler.TryLoadFromAtlas / LoadFromAtlas) gets nothing back, because no Unity atlas has
+    /// that name. Better Cashier draws its item cards that way, so the sign showed up blank there.
+    /// This answers lookups for this mod's own atlas path with the mod's sprite; every other atlas goes
+    /// through untouched.
+    /// </summary>
+    /// <remarks>
+    /// Patches the private LoadFromAtlasRaw, which both public loaders call, rather than the two one-line
+    /// wrappers that the runtime may inline. It runs for every sprite the game loads, so the guard is a
+    /// single string comparison and the sprite is built once and cached.
+    /// </remarks>
+    [HarmonyPatch(typeof(RenderHandler), "LoadFromAtlasRaw")]
+    internal static class ModAtlasSpritePatch
+    {
+        private static Sprite cached;
+
+        private static bool Prefix(string atlasPath, string name, ref Sprite __result)
+        {
+            if (atlasPath != ModEntry.ModId || name != ModEntry.SpriteKey)
+            {
+                return true;
+            }
+            if (cached == null)
+            {
+                cached = LoadSignSprite();
+            }
+            if (cached == null)
+            {
+                return true;
+            }
+            __result = cached;
+            return false;
+        }
+
+        /// <summary>
+        /// Builds the sprite from the mod's own texture, the same way the game's mod loader does (point
+        /// filtering, clamped, 100 pixels per unit, centred pivot). Reads the file through ModHelper, which
+        /// needs no declared capability; the loader's own sprite table is off limits to mods.
+        /// </summary>
+        private static Sprite LoadSignSprite()
+        {
+            byte[] png = ModHelper.ReadModFileBytes(ModEntry.ModId, "Textures/Items/" + ModEntry.SpriteKey + ".png");
+            if (png == null)
+            {
+                return null;
+            }
+            Texture2D texture = new Texture2D(2, 2, TextureFormat.RGBA32, false);
+            if (!texture.LoadImage(png))
+            {
+                return null;
+            }
+            texture.filterMode = FilterMode.Point;
+            texture.wrapMode = TextureWrapMode.Clamp;
+            texture.Apply();
+            return Sprite.Create(texture, new Rect(0f, 0f, texture.width, texture.height), new Vector2(0.5f, 0.5f), 100f);
         }
     }
 }
